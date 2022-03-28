@@ -38,6 +38,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow-y: hidden;
 }
 input,
 button,
@@ -81,7 +82,7 @@ h6 {
 /*--------------------*/
 
 .wrapper {
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
@@ -89,127 +90,82 @@ h6 {
 
 .fullscreen-container {
   min-height: 100vh;
-  display: flex;
-  flex: 0 0 auto;
 }
 
 .legend-container {
   height: 100vh;
   width: 425px;
   background-color: #292d3d;
+  color: #a4a6ad;
+  padding-top: 83px;
+  overflow-y: scroll;
 }
 
 .legend-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 425px;
+  height: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f222e;
+  padding: 0 23px;
+}
+.legend-title {
+  color: #4a71c4;
+  font-size: 32px;
+  cursor: pointer;
+}
+.info-button {
+  width: 12px;
+  height: 26px;
+  background: url(../../icons/info.svg) no-repeat;
+}
+.legend-main {
+  padding: 23px;
+}
+.event-container {
+  margin-bottom: 23px;
+}
+.event-header {
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 23px 0 23px;
-  height: 10vh;
-  background-color: #1f222e;
-  color: #4a71c4;
-  font-size: 4vh;
-  font-weight: bold;
-}
-
-.info-button {
-  background: url(/icons/info.svg) no-repeat;
-  height: 4vh;
-  width: 12px;
-}
-
-.legend-main {
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  padding: 23px 23px 0 23px;
-  color: #a4a6ad;
-}
-
-.main-ul {
-  width: 100%;
-}
-
-.event-container {
-  width: 100%;
-  height: 17vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.event-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  height: 5vh;
-  align-items: flex-end;
 }
 
 .event-title {
-  font-size: 3vh;
-  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
-
-.castles::before {
-  content: url(/icons/castle.svg);
-  width: 39px;
-  height: 5vh;
-  display: inline-block;
-  margin-right: 10px;
-  position: relative;
-  top: 5px;
+.event-checkbox {
 }
-
-.factory::before {
-  content: url(/icons/factory.svg);
-  width: 39px;
-  height: 5vh;
-  display: inline-block;
-  margin-right: 10px;
-  position: relative;
-  top: 5px;
-}
-
-.siege::before {
-  content: "";
-  background-image: url(/icons/siege.png);
-  background-size: 39px;
-  background-repeat: no-repeat;
-  width: 39px;
-  height: 5.5vh;
-  display: inline-block;
-  margin-right: 10px;
-  position: relative;
-  top: 5px;
-}
-
-.battles::before {
-  content: "";
-  background-image: url(/icons/swords.png);
-  background-size: 39px;
-  background-repeat: no-repeat;
-  width: 39px;
-  height: 5.5vh;
-  display: inline-block;
-  margin-right: 10px;
-  position: relative;
-  top: 5px;
-}
-
 .sub-ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .event-item {
   display: flex;
-  align-items: center;
-  height: 4vh;
-  font-size: 2vh;
-  padding-left: 23px;
-  width: 320px;
   background-color: #1f222e;
-  margin-bottom: 7px;
+  width: 320px;
+  height: 36px;
+  margin-bottom: 8px;
+  align-items: center;
+  padding-left: 20px;
+}
+.factory::before {
+ 
+}
+.siege::before {
+}
+.battles::before {
+}
+.castles::before {
+    
+}
+.map-container {
 }
