@@ -38,7 +38,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  overflow-y: hidden;
+  background-color: #1f222e;;
 }
 input,
 button,
@@ -88,13 +88,19 @@ h6 {
   flex: 0 0 auto;
 }
 
-.fullscreen-container {
-  min-height: 100vh;
-  overflow-y: hidden;
-  display: flex;
-  width: 100%;
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2414px;
+  height: 1902px;
   background: url(../../img/map.png) no-repeat;
-  background-size: 100% 100vh;
+  background-size: 100% 100%;
+  transform-origin: 0 0;
+}
+
+.fullscreen-container {
+  display: flex;
 }
 
 .legend-container {
