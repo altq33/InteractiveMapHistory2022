@@ -171,6 +171,7 @@ h6 {
 }
 .legend-main {
   padding: 23px;
+  
 }
 .event-container {
   margin-bottom: 23px;
@@ -254,4 +255,18 @@ h6 {
   background-size: contain;
   position: relative;
   margin-right: 10px;
+}
+
+
+::-webkit-scrollbar{
+  width: 32px;
+
+}
+
+body::-webkit-scrollbar-track{
+ background: transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: url("../../icons/strela.png") no-repeat;
 }
