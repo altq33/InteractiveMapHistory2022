@@ -24,8 +24,8 @@ function addOnWheel(elem, handler) {
     var delta = e.deltaY || e.detail || e.wheelDelta;
 
     // отмасштабируем при помощи CSS
-    if (delta > 0) scale -= 0.05;
-    else scale += 0.05;
+    if (delta > 0 && scale > 0.1) scale -= 0.05;
+    if (delta <= 0) scale += 0.05;
 
     mainDiv.style.transform = mainDiv.style.WebkitTransform = mainDiv.style.MsTransform = 'scale(' + scale + ')';
     // отменим прокрутку

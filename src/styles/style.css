@@ -96,7 +96,7 @@ h6 {
   height: 1902px;
   background: url(../../img/map.png) no-repeat;
   background-size: 100% 100%;
-  transform-origin: 0 0;
+  transform-origin: 40% 0%;
 }
 
 .fullscreen-container {
@@ -135,6 +135,7 @@ h6 {
   top: 0;
   left: 0;
   transition-duration: 1s;
+  z-index: 2;
 }
 
 .legend-header {
@@ -258,15 +259,28 @@ h6 {
 }
 
 
-::-webkit-scrollbar{
-  width: 32px;
-
-}
-
-body::-webkit-scrollbar-track{
- background: transparent;
+body::-webkit-scrollbar{
+  width: 20px;
+  height: 20px;
 }
 
 body::-webkit-scrollbar-thumb{
-  background: url("../../icons/strela.png") no-repeat;
+  background: url("../../icons/arrow-scroll.png");
 }
+
+body::-webkit-scrollbar-corner {
+  background-color: #1f222e;
+}
+
+.legend-container::-webkit-scrollbar{
+  width: 4px;
+  border-radius: 10px;
+}
+
+ .legend-container::-webkit-scrollbar-thumb{
+  background-color: #a4a6ad;;
+  border-radius: 10px;
+  width: 3px;
+}
+
+
