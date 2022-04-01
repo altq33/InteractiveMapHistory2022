@@ -31,5 +31,4 @@ function addOnWheel(elem, handler) {
     // отменим прокрутку
     e.preventDefault();
   });
-
   
