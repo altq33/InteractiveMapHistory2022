@@ -7,7 +7,7 @@ clickTitle.addEventListener("click", offPanel);
 legendExpand.addEventListener("click", onPanel);
 
 function offPanel(e) {
-    legendExpand.style.left  = "0";
+    legendExpand.style.left  = "-10px";
     legendContainer.style.left = "-100%";
     legendHeader.style.left = "-100%";
     legendContainer.style.transition = "all 1s";
