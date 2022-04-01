@@ -140,6 +140,7 @@ h6 {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  flex: 1 1 50%;
 }
 .event-checkbox {
 }
@@ -157,15 +158,46 @@ h6 {
   align-items: center;
   padding-left: 20px;
 }
-.factory::before {
- 
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.siege::before {
+
+.castles {
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/castle.svg) no-repeat;
+  position: relative;
+  bottom: 5px;
+  margin-right: 10px;
 }
-.battles::before {
+
+.factory {
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/factory.svg) no-repeat;
+  position: relative;
+  bottom: 25px;
+  margin-right: 10px;
 }
-.castles::before {
-    
+
+.siege {
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/siege.png) no-repeat;
+  background-size: contain;
+  position: relative;
+  margin-right: 10px;
+  bottom: 5px;
 }
-.map-container {
+
+.battles {
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/swords.png) no-repeat;
+  background-size: contain;
+  position: relative;
+  margin-right: 10px;
 }

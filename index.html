@@ -7,12 +7,12 @@
     <meta name="description" content="Интерактивная карта восстания Емельяна Пугачева 1773—1775 годов.">
     <meta name="author" content="Чанков Д.С. Солдатенков К.С.">
     <title>Интерактивная карта | Пугачевское восстание</title>
-    <link rel="shortcut icon" href="/icons/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="shortcut icon" href="./icons/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./src/styles/style.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="fullscreen-container">      <!--Внешний блок будет на весь экран, чтоб карта всегда была на весь экран в независимости от устройства-->
+        <div class="fullscreen-container">    
             <div class="legend-container">
                 <div class="legend-header">
                     <h1 class="legend-title">Места и события</h1>
@@ -21,8 +21,11 @@
                 <div class="legend-main">
                     <ul class="main-ul">
                         <li class="event-container">
-                            <div class="event-header castles">
-                                <h2 class="event-title">Крепости</h2>
+                            <div class="event-header">
+                                <div class="title-container">
+                                    <div class="title-icon castles"></div>
+                                    <h2 class="event-title">Крепости</h2>
+                                </div>                            
                                 <input type="checkbox" class="event-checkbox">  
                             </div>
                             <ul class="sub-ul">
@@ -31,8 +34,11 @@
                             </ul>
                         </li>
                         <li class="event-container">
-                            <div class="event-header factory">
-                                <h2 class="event-title">Крупные заводы сожженные восставшими</h2>
+                            <div class="event-header">
+                                <div class="title-container">
+                                    <div class="title-icon factory"></div>
+                                    <h2 class="event-title">Крупные заводы сожженные восставшими</h2>
+                                </div>                       
                                 <input type="checkbox" class="event-checkbox">  
                             </div>
                             <ul class="sub-ul">
@@ -41,8 +47,11 @@
                             </ul>
                         </li>
                         <li class="event-container">
-                            <div class="event-header siege">
-                                <h2 class="event-title">Осады населенных пунктов</h2>
+                            <div class="event-header">
+                                <div class="title-container">
+                                    <div class="title-icon siege"></div>
+                                    <h2 class="event-title">Осады населенных пунктов</h2>
+                                </div>                            
                                 <input type="checkbox" class="event-checkbox">  
                             </div>
                             <ul class="sub-ul">
@@ -51,8 +60,12 @@
                             </ul>
                         </li>
                         <li class="event-container">
-                            <div class="event-header battles">
-                                <h2 class="event-title">Сражения</h2>
+                            <div class="event-header">
+                                <div class="title-container">
+                                    <div class="title-icon battles"></div>
+                                    <h2 class="event-title">Сражения</h2>
+                                </div>
+                                
                                 <input type="checkbox" class="event-checkbox">  
                             </div>
                             <ul class="sub-ul">
