@@ -89,5 +89,16 @@
         _window[addEventListener]('load', reset, 0);
     }
 
+    const legendContainer = document.querySelector(".legend-container");
+    legendContainer.addEventListener("mouseover", function() {
+        body.classList.remove("dragscroll");
+        reset();
+      })
+      legendContainer.addEventListener("mouseout", function() {
+        body.classList.add("dragscroll");
+        reset();
+      })
+      
+
     exports.reset = reset;
 }));
