@@ -20,15 +20,24 @@ function addOnWheel(elem, handler) {
   var scale = 1;
 
   addOnWheel(mainDiv, function(e) {
-
+    
     var delta = e.deltaY || e.detail || e.wheelDelta;
 
     // отмасштабируем при помощи CSS
-    if (delta > 0 && scale > 0.1) scale -= 0.05;
+    if (delta > 0 && scale > 0.35)  scale -= 0.05;
     if (delta <= 0) scale += 0.05;
 
     mainDiv.style.transform = mainDiv.style.WebkitTransform = mainDiv.style.MsTransform = 'scale(' + scale + ')';
     // отменим прокрутку
     e.preventDefault();
   });
-  
+
+const body = document.querySelector("body");
+body.addEventListener("mousedown", function(e) {
+  body.style.cursor = "grabbing";
+})
+
+body.addEventListener("mouseup", function(e) {
+  body.style.cursor = "grab";
+})
+
