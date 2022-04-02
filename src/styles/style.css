@@ -40,6 +40,7 @@ body {
   -webkit-text-size-adjust: 100%;
   background-color: #1f222e;
   cursor: grab;
+  overflow: hidden;
 }
 input,
 button,
