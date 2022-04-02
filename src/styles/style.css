@@ -126,6 +126,25 @@ h6 {
   transform: translatex(10px);
 }
 
+.settings-button {
+  width: 64px;
+  height: 74px;
+  position: fixed;
+  top: -11px; 
+  right: 5%;
+  background-color: #292d3d;
+  background-image: url(../../icons/settings.png);
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
+  border-radius:0 0 7px 7px;
+  z-index: 3;
+  transition: all 0.5s ease;
+}
+.settings-button:hover {
+  transition: all 0.5s ease;
+  transform: translate(0, 10px);
+}
 .legend-container {
   height: 100vh;
   width: 425px;
@@ -207,9 +226,14 @@ h6 {
   background-color: #1f222e;
   width: 320px;
   height: 36px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   align-items: center;
   padding-left: 20px;
+  transition: all .2s linear;
+}
+.event-item:hover {
+  transform: translate(-7px, -2px);
+  transition: all .2s linear;
 }
 
 .title-container {
