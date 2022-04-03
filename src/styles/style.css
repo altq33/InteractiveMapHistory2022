@@ -220,6 +220,7 @@ h6 {
   border-radius:0 0 7px 7px;
   z-index: 3;
   transition: all 0.5s ease;
+  opacity: 0.9;
 }
 .settings-button:hover {
   transition: all 0.5s ease;
@@ -307,6 +308,7 @@ label span {
   height: 20px;
   background-color:#ffffff;
   padding:3px;
+  cursor: pointer;
 }
 
 [type=checkbox]:checked + span:before {
