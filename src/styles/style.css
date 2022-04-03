@@ -135,7 +135,7 @@ h6 {
   background-color: #292d3d;
   background-image: url(../../icons/settings.png);
   background-repeat: no-repeat;
-  background-size: 80% 80%;
+  
   background-position: center;
   border-radius:0 0 7px 7px;
   z-index: 3;
@@ -214,8 +214,31 @@ h6 {
   cursor: pointer;
   flex: 1 1 50%;
 }
-.event-checkbox {
+
+label input {
+  display: none;
 }
+label span {
+  border: 1px solid gray;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  border-radius: 40%;
+  height: 20px;
+  background-color:#ffffff;
+  box-shadow: 1px 1px 20px rgb(128, 147, 255);
+  padding:3px;
+}
+
+[type=checkbox]:checked + span:before {
+  content: '\2714';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  font-size:23px;
+  color:rgb(81, 50, 255);
+}
+
 .sub-ul {
   display: flex;
   flex-direction: column;
