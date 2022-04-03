@@ -13,14 +13,14 @@
 <body class="dragscroll">
     <div class="wrapper">
         <div class="map-container"> 
-            <div class="icons" id="factory1"></div>
-            <div class="icons" id="factory2"></div>
-            <div class="icons" id="castle1"></div>
-            <div class="icons" id="castle2"></div>
-            <div class="icons" id="siege1"></div>
-            <div class="icons" id="siege2"></div>
-            <div class="icons" id="swords2"></div>
-            <div class="icons" id="swords1"></div>
+            <div class="icon map-factory-icon" id="factory1"></div>
+            <div class="icon map-factory-icon" id="factory2"></div>
+            <div class="icon map-castle-icon" id="castle1"></div>
+            <div class="icon map-castle-icon" id="castle2"></div>
+            <div class="icon map-siege-icon" id="siege1"></div>
+            <div class="icon map-siege-icon" id="siege2"></div>
+            <div class="icon map-swords-icon" id="swords2"></div>
+            <div class="icon map-swords-icon" id="swords1"></div>
              </div>
         <div class="fullscreen-container">    
             <button class="legend-expand"></button>
@@ -39,7 +39,7 @@
                                     <h2 class="event-title">Крепости</h2>
                                 </div>                            
                                 <label>
-                                    <input type="checkbox" class="event-checkbox"> 
+                                    <input type="checkbox" class="event-checkbox" id="castles-checkbox" checked> 
                                     <span></span>
                                 </label>
                             </div>
@@ -55,7 +55,7 @@
                                     <h2 class="event-title">Крупные заводы сожженные восставшими</h2>
                                 </div>                       
                                 <label> 
-                                    <input type="checkbox" class="event-checkbox"> 
+                                    <input type="checkbox" class="event-checkbox" id="factories-checkbox" checked> 
                                     <span></span>
                                  </label>
                                 
@@ -72,7 +72,7 @@
                                     <h2 class="event-title">Осады населенных пунктов</h2>
                                 </div>                            
                                 <label>
-                                    <input type="checkbox" class="event-checkbox"> 
+                                    <input type="checkbox" class="event-checkbox" id="siege-checkbox" checked> 
                                     <span></span>
                                 </label>
                             </div>
@@ -88,7 +88,7 @@
                                     <h2 class="event-title">Сражения</h2>
                                 </div>
                                 <label>
-                                    <input type="checkbox" class="event-checkbox"> 
+                                    <input type="checkbox" class="event-checkbox" id="battles-checkbox" checked> 
                                     <span></span>
                                 </label>
                             </div>
@@ -105,6 +105,6 @@
     <script src="./src/scripts/main.js"></script>
     <script src="./src/scripts/moving-panels.js"></script>
     <script src="./src/scripts/dragtoscroll.js"></script>
-    <script>src="./src/scripts/jquery-3.6.0.js"</script>
+    <script src="./src/scripts/checkbox-logic.js"></script>
 </body>
 </html>

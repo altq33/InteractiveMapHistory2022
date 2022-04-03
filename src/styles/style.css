@@ -90,123 +90,96 @@ h6 {
   flex: 0 0 auto;
 }
 
-
 .map-container {
-  
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 23%;
   width: 2414px;
   height: 1902px;
   background: url(../../img/map.png) no-repeat;
   background-size: 100% 100%;
-  transform-origin: 30% 0%;
+}
+
+.icon{
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  transition: all 0.3s linear;
+}
+
+.icon:hover {
+  transition: all 0.3s linear;
+  transform: translate(0, -10px) scale(1.3);
+  cursor: pointer;
+}
+
+
+.map-factory-icon {
+  background: url(../../icons/factory.svg) no-repeat;
+}
+
+.map-castle-icon {
+  background: url(../../icons/castle.svg) no-repeat;
+}
+
+.map-siege-icon {
+  background: url(../../icons/siege.png) no-repeat;
+  background-size: contain;
+}
+
+.map-swords-icon {
+  background: url(../../icons/swords.png) no-repeat;
+  background-size: contain;
 }
 
 #factory1{
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  background: url(../../icons/factory.svg) no-repeat;
-  position: relative;
-  bottom: 5px;
-  margin-right: 10px;
+  position: absolute;
   left: 1135px;
   top: 220px;
-  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
-  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
 }
 
-
-.icons{
-  
-}
-
-
-#factory2{
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  background: url(../../icons/factory.svg) no-repeat;
-  position: relative;
-  bottom: 5px;
-  margin-right: 10px;
+#factory2 {
+  position: absolute;
   left: 1215px;
   top: 135px;
-  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
-  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
 }
 
-#castle1{
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  background: url(../../icons/castle.svg) no-repeat;
-  position: relative;
-  bottom: 5px;
-  margin-right: 10px;
+#castle1 {
+  position: absolute;
   left: 1100px;
   top: 849px;
-  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
-  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
 }
 
-#castle2{
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  background: url(../../icons/castle.svg) no-repeat;
-  position: relative;
-  bottom: 5px;
-  margin-right: 10px;
+#castle2 {
+  position: absolute;
   left: 1053px;
   top: 773px;
-  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
-  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
 }
 
 #siege1{
-  width: 40px;
-  height: 40px;
-  background: url(../../icons/siege.png) no-repeat;
-  background-size: contain;
-  position: relative;
-  margin: 235px 0px 0px 749px;
-  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
-  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  position: absolute;
+  left: 749px;
+  top: 235px;
 }
 
 #siege2{
-  width: 40px;
-  height: 40px;
-  background: url(../../icons/siege.png) no-repeat;
-  background-size: contain;
-  position: relative;
-  margin: 1071px 0px 0px 310px;
-  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
-  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  position: absolute;
+  top: 1071px;
+  left: 310px;
 }
 
 #swords1{
-  width: 40px;
-  height: 40px;
-  background: url(../../icons/swords.png) no-repeat;
-  background-size: contain;
-  position: relative;
-  margin: -551px 0px 0px 811px;
-  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
-  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  position: absolute;
+  bottom: 551px; 
+  left: 811px; 
 }
 
-
 #swords2{
-  width: 40px;
-  height: 40px;
-  background: url(../../icons/swords.png) no-repeat;
-  background-size: contain;
-  position: relative;
-  margin: -634px 0px 0px 1239px;
-  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
-  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  position: absolute;
+  bottom: 634px; 
+  left: 1239px; 
 }
 
 .fullscreen-container {
@@ -243,7 +216,6 @@ h6 {
   background-color: #292d3d;
   background-image: url(../../icons/settings.png);
   background-repeat: no-repeat;
-  
   background-position: center;
   border-radius:0 0 7px 7px;
   z-index: 3;
@@ -331,10 +303,9 @@ label span {
   display: inline-block;
   position: relative;
   width: 20px;
-  border-radius: 40%;
+  border-radius: 7px;
   height: 20px;
   background-color:#ffffff;
-  box-shadow: 1px 1px 20px rgb(128, 147, 255);
   padding:3px;
 }
 
@@ -442,5 +413,3 @@ body::-webkit-scrollbar-corner {
   border-radius: 10px;
   width: 3px;
 }
-
-

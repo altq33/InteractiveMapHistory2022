@@ -1,13 +1,5 @@
 const mainDiv = document.querySelector(".map-container");
-
-$('#checkbox_check').on('click', function () {
-  if ( $(this).is(':checked') ) {
-      icons.style.display = 'none';
-  } else {
-      // checkbox unchecked 
-  }
-})
-    
+ 
 function addOnWheel(elem, handler) {
     if (elem.addEventListener) {
       if ('onwheel' in document) {
@@ -35,7 +27,7 @@ function addOnWheel(elem, handler) {
     if (delta > 0 && scale > 0.35)  scale -= 0.05;
     if (delta <= 0) scale += 0.05;
 
-    mainDiv.style.transform = mainDiv.style.WebkitTransform = mainDiv.style.MsTransform = 'scale(' + scale + ')';
+    mainDiv.style.zoom = scale;
     // отменим прокрутку
     e.preventDefault();
   });
