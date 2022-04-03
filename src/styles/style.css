@@ -90,8 +90,9 @@ h6 {
   flex: 0 0 auto;
 }
 
+
 .map-container {
-  position: absolute;
+  
   top: 0;
   left: 0;
   width: 2414px;
@@ -99,6 +100,113 @@ h6 {
   background: url(../../img/map.png) no-repeat;
   background-size: 100% 100%;
   transform-origin: 30% 0%;
+}
+
+#factory1{
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/factory.svg) no-repeat;
+  position: relative;
+  bottom: 5px;
+  margin-right: 10px;
+  left: 1135px;
+  top: 220px;
+  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+}
+
+
+.icons{
+  
+}
+
+
+#factory2{
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/factory.svg) no-repeat;
+  position: relative;
+  bottom: 5px;
+  margin-right: 10px;
+  left: 1215px;
+  top: 135px;
+  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+}
+
+#castle1{
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/castle.svg) no-repeat;
+  position: relative;
+  bottom: 5px;
+  margin-right: 10px;
+  left: 1100px;
+  top: 849px;
+  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+}
+
+#castle2{
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/castle.svg) no-repeat;
+  position: relative;
+  bottom: 5px;
+  margin-right: 10px;
+  left: 1053px;
+  top: 773px;
+  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+}
+
+#siege1{
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/siege.png) no-repeat;
+  background-size: contain;
+  position: relative;
+  margin: 235px 0px 0px 749px;
+  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+}
+
+#siege2{
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/siege.png) no-repeat;
+  background-size: contain;
+  position: relative;
+  margin: 1071px 0px 0px 310px;
+  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+}
+
+#swords1{
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/swords.png) no-repeat;
+  background-size: contain;
+  position: relative;
+  margin: -551px 0px 0px 811px;
+  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+}
+
+
+#swords2{
+  width: 40px;
+  height: 40px;
+  background: url(../../icons/swords.png) no-repeat;
+  background-size: contain;
+  position: relative;
+  margin: -634px 0px 0px 1239px;
+  -webkit-filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
+  filter: drop-shadow(3px 5px 5px rgb(85, 85, 85));
 }
 
 .fullscreen-container {

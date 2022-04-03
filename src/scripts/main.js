@@ -1,5 +1,13 @@
 const mainDiv = document.querySelector(".map-container");
 
+$('#checkbox_check').on('click', function () {
+  if ( $(this).is(':checked') ) {
+      icons.style.display = 'none';
+  } else {
+      // checkbox unchecked 
+  }
+})
+    
 function addOnWheel(elem, handler) {
     if (elem.addEventListener) {
       if ('onwheel' in document) {
