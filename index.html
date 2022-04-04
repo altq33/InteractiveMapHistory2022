@@ -28,7 +28,7 @@
             <div class="legend-container">
                 <div class="legend-header">
                     <h1 class="legend-title">Места и события</h1>
-                    <button class="info-button"></button>
+                    <a href="#modal-info" class="info-button modal-link"></a>
                 </div>
                 <div class="legend-main">
                     <ul class="main-ul">
@@ -38,7 +38,7 @@
                                     <div class="title-icon castles"></div>
                                     <h2 class="event-title">Крепости</h2>
                                 </div>                            
-                                <label>
+                                <label  id="castle-label">
                                     <input type="checkbox" class="event-checkbox" id="castles-checkbox" checked> 
                                     <span></span>
                                 </label>
@@ -54,7 +54,7 @@
                                     <div class="title-icon factory"></div>
                                     <h2 class="event-title">Крупные заводы сожженные восставшими</h2>
                                 </div>                       
-                                <label> 
+                                <label id="factory-label"> 
                                     <input type="checkbox" class="event-checkbox" id="factories-checkbox" checked> 
                                     <span></span>
                                  </label>
@@ -71,7 +71,7 @@
                                     <div class="title-icon siege"></div>
                                     <h2 class="event-title">Осады населенных пунктов</h2>
                                 </div>                            
-                                <label>
+                                <label  id="siege-label">
                                     <input type="checkbox" class="event-checkbox" id="siege-checkbox" checked> 
                                     <span></span>
                                 </label>
@@ -87,7 +87,7 @@
                                     <div class="title-icon battles"></div>
                                     <h2 class="event-title">Сражения</h2>
                                 </div>
-                                <label>
+                                <label  id="swords-label">
                                     <input type="checkbox" class="event-checkbox" id="battles-checkbox" checked> 
                                     <span></span>
                                 </label>
@@ -102,9 +102,25 @@
             </div>       
         </div>
     </div>
+    <!-- Модальные окна-->
+    <div class="modal" id="modal-info">
+        <div class="modal-body">
+            <div class="modal-content">
+                 <a href="#" class="modal-close close-modal">
+                     X
+                 </a>  
+                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim voluptatum reprehenderit reiciendis aut, deserunt rem nulla tempore. Fuga aliquid eos harum fugiat corporis voluptatum minus, omnis rerum maxime, laboriosam cupiditate! 
+                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim voluptatum reprehenderit reiciendis aut, deserunt rem nulla tempore. Fuga aliquid eos harum fugiat corporis voluptatum minus, omnis rerum maxime, laboriosam cupiditate! 
+                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim voluptatum reprehenderit reiciendis aut, deserunt rem nulla tempore. Fuga aliquid eos harum fugiat corporis voluptatum minus, omnis rerum maxime, laboriosam cupiditate! 
+                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim voluptatum reprehenderit reiciendis aut, deserunt rem nulla tempore. Fuga aliquid eos harum fugiat corporis voluptatum minus, omnis rerum maxime, laboriosam cupiditate! 
+                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim voluptatum reprehenderit reiciendis aut, deserunt rem nulla tempore. Fuga aliquid eos harum fugiat corporis voluptatum minus, omnis rerum maxime, laboriosam cupiditate! 
+            </div>
+        </div>
+    </div>
     <script src="./src/scripts/main.js"></script>
     <script src="./src/scripts/moving-panels.js"></script>
     <script src="./src/scripts/dragtoscroll.js"></script>
     <script src="./src/scripts/checkbox-logic.js"></script>
+    <script src="./src/scripts/modal.js"></script>
 </body>
 </html>
