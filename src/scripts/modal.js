@@ -1,5 +1,5 @@
 const modalLinks = document.querySelectorAll(".modal-link"); 
-const lockPadding = document.querySelector(".lock-padding");
+const lockPadding = document.querySelectorAll(".lock-padding");
 
 let unlock = true; 
 
@@ -34,7 +34,7 @@ function modalOpen(currentModal) {
         if(modalActive) {
             modalClose(modalActive, false);
         }else  {
-            // bodyLock();
+            bodyLock();
         }
         currentModal.classList.add("open");
         currentModal.addEventListener("click", function(e) {
@@ -48,37 +48,36 @@ function modalOpen(currentModal) {
 function modalClose(modalActive, doUnlock = true) {
     if(unlock) {
         modalActive.classList.remove("open");
-        // if(doUnlock) {
-        //     bodyUnLock();
-        // }
+        if(doUnlock) {
+            bodyUnLock();
+        }
     }
 }
 
-// function bodyLock() {
-//     const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + 'px';
+function bodyLock() {
+    const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + 'px';
     
-//     for (item of lockPadding) {
-//         item.style.paddingRight = lockPaddingValue; 
-//     } 
-//     body.style.paddingRight = lockPaddingValue;
-//     body.classList.add("lock");   // попробовать remove dragscroll 
-//     unlock = false; 
-//     setTimeout(function() {
-//         unlock = true; 
-//     }, timeout);
-// }
+    for (let i = 0; i < lockPadding.length; i++) {
+        const item = lockPadding[i];
+        item.style.paddingRight = lockPaddingValue; 
+    } 
+    body.style.paddingRight = lockPaddingValue;
+    setTimeout(function() {
+        unlock = true; 
+    }, timeout);
+}
 
-// function bodyUnLock() {
-//     setTimeout(function() {
-//         for(item of lockPadding) {
-//             item.style.paddingRight = 0; 
-//         }
-//         body.style.paddingRight = 0; 
-//         body.classList.remove("lock");
-//     }, timeout);
+function bodyUnLock() {
+    setTimeout(function() {
+        for (let i = 0; i < lockPadding.length; i++) {
+            const item = lockPadding[i];
+            item.style.paddingRight = 0; 
+        } 
+        body.style.paddingRight = 0; 
+    }, timeout);
 
-//     unlock = false; 
-//     setTimeout(function() {
-//         unlock = true; 
-//     }, timeout);
-// }
+    unlock = false; 
+    setTimeout(function() {
+        unlock = true; 
+    }, timeout);
+}
