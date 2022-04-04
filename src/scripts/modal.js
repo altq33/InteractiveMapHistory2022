@@ -19,9 +19,10 @@ if(modalLinks.length > 0) {
 
 const modalCloseIcon = document.querySelectorAll(".close-modal");
 if (modalCloseIcon.length > 0) {
-    for(item of modalCloseIcon) {
-        item.addEventListener("click", function(e) {
-            modalCloseIcon(item.closest('.modal'));
+    for(let i = 0; i < modalCloseIcon.length; i++) {
+        const elem = modalCloseIcon[i];
+        elem.addEventListener("click", function(e) {
+            modalClose(elem.closest('.modal'));
             e.preventDefault();
         })
     }
@@ -33,7 +34,7 @@ function modalOpen(currentModal) {
         if(modalActive) {
             modalClose(modalActive, false);
         }else  {
-            bodyLock();
+            // bodyLock();
         }
         currentModal.classList.add("open");
         currentModal.addEventListener("click", function(e) {
@@ -47,37 +48,37 @@ function modalOpen(currentModal) {
 function modalClose(modalActive, doUnlock = true) {
     if(unlock) {
         modalActive.classList.remove("open");
-        if(doUnlock) {
-            bodyUnLock();
-        }
+        // if(doUnlock) {
+        //     bodyUnLock();
+        // }
     }
 }
 
-function bodyLock() {
-    const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + 'px';
+// function bodyLock() {
+//     const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + 'px';
     
-    for (item of lockPadding) {
-        item.style.paddingRight = lockPaddingValue; 
-    } 
-    body.style.paddingRight = lockPaddingValue;
-    body.classList.add("lock");   // попробовать remove dragscroll 
-    unlock = false; 
-    setTimeout(function() {
-        unlock = true; 
-    }, timeout);
-}
+//     for (item of lockPadding) {
+//         item.style.paddingRight = lockPaddingValue; 
+//     } 
+//     body.style.paddingRight = lockPaddingValue;
+//     body.classList.add("lock");   // попробовать remove dragscroll 
+//     unlock = false; 
+//     setTimeout(function() {
+//         unlock = true; 
+//     }, timeout);
+// }
 
-function bodyUnLock() {
-    setTimeout(function() {
-        for(item of lockPadding) {
-            item.style.paddingRight = 0; 
-        }
-        body.style.paddingRight = 0; 
-        body.classList.remove("lock");
-    }, timeout);
+// function bodyUnLock() {
+//     setTimeout(function() {
+//         for(item of lockPadding) {
+//             item.style.paddingRight = 0; 
+//         }
+//         body.style.paddingRight = 0; 
+//         body.classList.remove("lock");
+//     }, timeout);
 
-    unlock = false; 
-    setTimeout(function() {
-        unlock = true; 
-    }, timeout);
-}
+//     unlock = false; 
+//     setTimeout(function() {
+//         unlock = true; 
+//     }, timeout);
+// }
