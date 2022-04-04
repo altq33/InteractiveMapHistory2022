@@ -94,7 +94,7 @@ h6 {
 .map-container {
   position: absolute;
   top: 0;
-  left: 425px;
+  left: 30%;
   width: 2414px;
   height: 1902px;
   background: url(../../img/map.png) no-repeat;
@@ -441,7 +441,7 @@ body::-webkit-scrollbar-corner {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   top: 0; 
   left: 0;
   z-index: 4;
@@ -462,16 +462,13 @@ body::-webkit-scrollbar-corner {
 }
 .modal-content {
   position: relative;
-  background-color: #fff;
-  max-width: 800px;
-  padding: 30px;
   transition: all 0.5s ease;
   transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 }
 .modal-close {
   position: absolute;
-  right: 12px;
-  top: 12px; 
+  right: 7px;
+  top: 7px; 
   width: 20px;
   height: 20px;
   transition: all 0.3s ease;
@@ -499,3 +496,36 @@ body::-webkit-scrollbar-corner {
   opacity: 1;
   transform: perspective(600px) translate(0, 0%) rotateX(0deg);
 }
+
+.modal-info-content {
+  background-color: #292d3d;
+  color: #a4a6ad;
+  font-size: 18px;
+  width: 800px;
+  height: 520px;
+  border-radius: 3px;
+  padding: 30px 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.info-img-container img:first-child{
+  width: 33%;
+}
+
+.info-img-container img:last-child{
+  width: 65%;
+}
+
+.info-text-container span{
+  color: #4a71c4;
+  font-size: 25px;
+}
+

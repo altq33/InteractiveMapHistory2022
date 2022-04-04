@@ -22,7 +22,7 @@ function onPanel(e) {
     legendHeader.style.left = "0";
     legendContainer.style.transition = "all 0.6s";
     legendHeader.style.transition = "all 0.6s";
-    mapContainer.style.left = "425px";
+    mapContainer.style.left = "30%";
 }
 
 

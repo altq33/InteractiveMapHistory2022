@@ -75,7 +75,6 @@ function bodyUnLock() {
         } 
         body.style.paddingRight = 0; 
     }, timeout);
-
     unlock = false; 
     setTimeout(function() {
         unlock = true; 
