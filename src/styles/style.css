@@ -94,12 +94,12 @@ h6 {
 .map-container {
   position: absolute;
   top: 0;
-  left: 30%;
+  left: 28%;
   width: 2414px;
   height: 1902px;
   background: url(../../img/map.png) no-repeat;
   background-size: 100% 100%;
-  transition: all .5s linear;
+  transition: all .5s ease;
 }
 
 .icon{
@@ -192,7 +192,7 @@ h6 {
   position: fixed;
   z-index: 3;
   top: 20%;
-  left: -100%;
+  left: 0;
   width: 62px;
   height: 62px;
   background-color: #292d3d;
@@ -201,12 +201,19 @@ h6 {
   background-size: 80% 80%;
   background-repeat: no-repeat;
   background-position: right;
-  transition-duration: 0.5s;
+  transition: all 0.3s ease;
   border-radius:0 7px 7px 0;
+  transform: translateX(-100%);
+  visibility: hidden;
+  opacity: 0;
 }
 .legend-expand:hover {
-  transition: all 0.5s ease;
-  transform: translatex(10px);
+  left: 10px;
+}
+.legend-expand-visible {
+  transform: translateX(-10px);
+  visibility: visible;
+  opacity: 1;
 }
 
 .settings-button {
@@ -229,36 +236,47 @@ h6 {
   transform: translate(0, 10px);
 }
 .legend-container {
-  height: 100vh;
+  height: 90vh;
   width: 425px;
   background-color: #292d3d;
   color: #a4a6ad;
-  padding-top: 83px;
   overflow-y: auto;
   flex: 0 0 auto;
+  overflow-x: hidden;
   position: fixed;
-  top: 0;
+  top: 10vh;
   left: 0;
-  transition-duration: 1s;
+  transition: all .5s ease;
   z-index: 2;
   cursor: default;
+  transform: none;
+  visibility: visible;
 }
-
 
 .legend-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 425px;
-  height: 83px;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #1f222e;
   padding: 0 23px;
-  z-index: 2;
-  transition-duration: 1s;
+  z-index: 3;
+  transition: all .5s ease;
+  transform: none;
+  visibility: visible;
+  cursor: default;
 }
+
+.legend-container-hide {
+  transform: translateX(-100%);
+  visibility: hidden;
+}
+
+
 .legend-title {
   color: #4a71c4;
   font-size: 32px;
@@ -279,7 +297,6 @@ h6 {
 }
 .legend-main {
   padding: 23px;
-  
 }
 .event-container {
   margin-bottom: 23px;
@@ -503,11 +520,6 @@ body::-webkit-scrollbar-corner {
   transform: perspective(600px) translate(0, 0%) rotateX(0deg);
 }
 
-.modal.open .modal-content2 {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
 .modal-info-content {
   background-color: #292d3d;
   color: #a4a6ad;
@@ -541,24 +553,9 @@ body::-webkit-scrollbar-corner {
 }
 
 
-.modal-settings {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(0px);
-  top: 0; 
-  right: 0;
-  z-index: 4;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
 .modal-settings-content {
-  position: absolute;
+  cursor: default;
+  position: fixed;
   top: 80px; 
   right: 50px;
   width: 320px;
@@ -568,6 +565,16 @@ body::-webkit-scrollbar-corner {
   display: flex;
   flex-direction: column;
   transition: all 0.5s ease;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(10px, -10px);
+}
+
+.settings-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .modal-setting-content-item {

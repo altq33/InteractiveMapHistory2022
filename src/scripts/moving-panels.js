@@ -8,21 +8,32 @@ clickTitle.addEventListener("click", offPanel);
 legendExpand.addEventListener("click", onPanel);
 
 function offPanel(e) {
-    legendExpand.style.left  = "-10px";
-    legendContainer.style.left = "-100%";
-    legendHeader.style.left = "-100%";
-    legendContainer.style.transition = "all 1s";
-    legendHeader.style.transition = "all 1s";
-    mapContainer.style.left = "0%";
+    legendContainer.classList.add("legend-container-hide");
+    legendHeader.classList.add("legend-container-hide");
+    setTimeout(function() {
+        legendExpand.classList.add("legend-expand-visible");
+    }, 500)
+    mapContainer.style.left = "0";
 } 
 
 function onPanel(e) {
-    legendExpand.style.left = "-100%";
-    legendContainer.style.left = "0";
-    legendHeader.style.left = "0";
-    legendContainer.style.transition = "all 0.6s";
-    legendHeader.style.transition = "all 0.6s";
-    mapContainer.style.left = "30%";
+    legendContainer.classList.remove("legend-container-hide");
+    legendHeader.classList.remove("legend-container-hide");
+    legendExpand.classList.remove("legend-expand-visible");   
+    mapContainer.style.left = "28%";
 }
 
+const settings = document.querySelector(".modal-settings-content");
+const settingsExpand = document.querySelector(".settings-button");
 
+settingsExpand.addEventListener("click", onSettings);
+window.addEventListener("click", e =>  {
+    const target = e.target;
+    if(!target.closest('.modal-settings-content') && !target.closest('.settings-button')) {
+        settings.classList.remove("settings-open");
+    }
+})
+
+function onSettings(e) {
+    settings.classList.add("settings-open");
+}

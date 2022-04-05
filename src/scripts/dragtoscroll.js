@@ -89,19 +89,8 @@
         _window[addEventListener]('load', reset, 0);
     }
 
-    const legendContainer = document.querySelector(".legend-container");
-    const modal = document.querySelectorAll(".modal");
-    const settings = document.querySelector(".modal-settings");
-    const settingsContent = document.querySelector(".modal-settings-content");
-    legendContainer.addEventListener("mouseover", function() {
-        body.classList.remove("dragscroll");
-        reset();
-      })
-    legendContainer.addEventListener("mouseout", function() {
-        body.classList.add("dragscroll");
-        reset();
-      })
-      for(item of modal) {
+    const noDrugItems = document.querySelectorAll(".no-drug");
+      for(item of noDrugItems) {
         item.addEventListener("mouseover", function() {
             body.classList.remove("dragscroll");
             reset();
