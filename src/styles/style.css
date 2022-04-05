@@ -211,7 +211,7 @@ h6 {
   left: 10px;
 }
 .legend-expand-visible {
-  transform: translateX(-10px);
+  transform: translateX(-11px);
   visibility: visible;
   opacity: 1;
 }

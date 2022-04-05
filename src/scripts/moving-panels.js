@@ -35,5 +35,5 @@ window.addEventListener("click", e =>  {
 })
 
 function onSettings(e) {
-    settings.classList.add("settings-open");
+    settings.classList.toggle("settings-open");
 }
