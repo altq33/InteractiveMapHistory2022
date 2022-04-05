@@ -90,23 +90,26 @@
     }
 
     const legendContainer = document.querySelector(".legend-container");
-    const modal = document.querySelector(".modal");
+    const modal = document.querySelectorAll(".modal");
+    const settings = document.querySelector(".modal-settings");
+    const settingsContent = document.querySelector(".modal-settings-content");
     legendContainer.addEventListener("mouseover", function() {
         body.classList.remove("dragscroll");
         reset();
       })
-      legendContainer.addEventListener("mouseout", function() {
+    legendContainer.addEventListener("mouseout", function() {
         body.classList.add("dragscroll");
         reset();
       })
-      modal.addEventListener("mouseover", function() {
-        body.classList.remove("dragscroll");
-        reset();
-      })
-      modal.addEventListener("mouseout", function() {
-        body.classList.add("dragscroll");
-        reset();
-      })
-
+      for(item of modal) {
+        item.addEventListener("mouseover", function() {
+            body.classList.remove("dragscroll");
+            reset();
+        })
+        item.addEventListener("mouseout", function() {
+            body.classList.add("dragscroll");
+            reset();
+        }) 
+      }
     exports.reset = reset;
 }));

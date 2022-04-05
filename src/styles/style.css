@@ -440,8 +440,9 @@ body::-webkit-scrollbar-corner {
 .modal {
   position: fixed;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%; 
+  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.5);
   top: 0; 
   left: 0;
   z-index: 4;
@@ -464,6 +465,11 @@ body::-webkit-scrollbar-corner {
   position: relative;
   transition: all 0.5s ease;
   transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+.modal-content2 { 
+  position: relative;
+  transition: all 0.5s ease;
+  transform: translate(10px, -10px);
 }
 .modal-close {
   position: absolute;
@@ -495,6 +501,11 @@ body::-webkit-scrollbar-corner {
 .modal.open .modal-content {
   opacity: 1;
   transform: perspective(600px) translate(0, 0%) rotateX(0deg);
+}
+
+.modal.open .modal-content2 {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .modal-info-content {
@@ -529,3 +540,48 @@ body::-webkit-scrollbar-corner {
   font-size: 25px;
 }
 
+
+.modal-settings {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  top: 0; 
+  right: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modal-settings-content {
+  position: absolute;
+  top: 80px; 
+  right: 50px;
+  width: 320px;
+  height: 235px;
+  background-color: #292d3d;
+  border-radius: 4px; 
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+
+.modal-setting-content-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #FFFFFFD9;
+  height: 45px;
+  align-items: center; 
+  padding: 0 10px;
+}
+
+.media-container {
+  width: 100%;
+  border-top: 1px solid hsla(0,0%,100%,.1);
+}
