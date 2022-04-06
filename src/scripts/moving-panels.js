@@ -66,3 +66,47 @@ scrollToggle.addEventListener("click", function(e) {
     }
 })
 
+
+castle_ul.onclick = function (event){
+    
+    if(tree1.classList.contains("sub-ul")){
+        tree1.classList.remove("sub-ul");
+        tree1.classList.add("sub-ul-hidden");
+    } else{
+        tree1.classList.remove("sub-ul-hidden");
+        tree1.classList.add("sub-ul");
+    }
+}
+
+factory_ul.onclick = function (event){
+    
+    if(tree2.classList.contains("sub-ul")){
+        tree2.classList.remove("sub-ul");
+        tree2.classList.add("sub-ul-hidden");
+    } else{
+        tree2.classList.remove("sub-ul-hidden");
+        tree2.classList.add("sub-ul");
+    }
+}
+
+siege_ul.onclick = function (event){
+    
+    if(tree3.classList.contains("sub-ul")){
+        tree3.classList.remove("sub-ul");
+        tree3.classList.add("sub-ul-hidden");
+    } else{
+        tree3.classList.remove("sub-ul-hidden");
+        tree3.classList.add("sub-ul");
+    }
+}
+
+battles_ul.onclick = function (event){
+    
+    if(tree4.classList.contains("sub-ul")){
+        tree4.classList.remove("sub-ul");
+        tree4.classList.add("sub-ul-hidden");
+    } else{
+        tree4.classList.remove("sub-ul-hidden");
+        tree4.classList.add("sub-ul");
+    }
+}
