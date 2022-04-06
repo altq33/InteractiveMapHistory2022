@@ -39,8 +39,13 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: #1f222e;
+  background-color: #292d3d;
   cursor: grab;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-hidden {
   overflow: hidden;
 }
 input,
@@ -83,6 +88,11 @@ h6 {
   font-weight: 400;
 }
 /*--------------------*/
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
 .wrapper {
   min-height: 100%;
@@ -195,9 +205,9 @@ h6 {
   left: 0;
   width: 62px;
   height: 62px;
-  background-color: #292d3d;
+  background-color: #1f222e;
   cursor: pointer;
-  background-image: url(../../icons/arrow-right.png);
+  background-image: url(../../icons/arrow-right.svg);
   background-size: 80% 80%;
   background-repeat: no-repeat;
   background-position: right;
@@ -213,27 +223,28 @@ h6 {
 .legend-expand-visible {
   transform: translateX(-11px);
   visibility: visible;
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .settings-button {
-  width: 64px;
-  height: 74px;
+  width: 40px;
+  height: 40px;
   position: fixed;
-  top: -11px; 
-  right: 5%;
-  background-color: #292d3d;
-  background-image: url(../../icons/settings.png);
+  top: 10px;
+  right: 10px;
+  background-color: #1f222e;
+  background-image: url(../../icons/settings.svg);
   background-repeat: no-repeat;
   background-position: center;
-  border-radius:0 0 7px 7px;
+  background-size: 80% 80%;
   z-index: 3;
   transition: all 0.5s ease;
-  opacity: 0.9;
+  border-radius: 7px;
+  opacity: 0.8;
 }
 .settings-button:hover {
   transition: all 0.5s ease;
-  transform: translate(0, 10px);
+  transform: scale(1.1);
 }
 .legend-container {
   height: 90vh;
@@ -577,11 +588,14 @@ body::-webkit-scrollbar-corner {
   transform: translate(0, 0);
 }
 
+.settings-title {
+  font-size: 18px;
+}
+
 .modal-setting-content-item {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  font-size: 14px;
   color: #FFFFFFD9;
   height: 45px;
   align-items: center; 
@@ -591,4 +605,12 @@ body::-webkit-scrollbar-corner {
 .media-container {
   width: 100%;
   border-top: 1px solid hsla(0,0%,100%,.1);
+}
+
+.material-icons {
+  user-select: none;
+}
+
+.scroll-toggle, .theme-toggle {
+  cursor: pointer;
 }

@@ -37,3 +37,32 @@ window.addEventListener("click", e =>  {
 function onSettings(e) {
     settings.classList.toggle("settings-open");
 }
+
+
+const themeToggle = document.querySelector(".theme-toggle");
+const scrollToggle = document.querySelector(".scroll-toggle");
+
+themeToggle.addEventListener("click", function(e) {
+    if(themeToggle.classList.contains("toggle-on")){
+        themeToggle.classList.remove("toggle-on");
+        themeToggle.innerHTML = "toggle_off";
+    }else {
+        themeToggle.classList.add("toggle-on");
+        themeToggle.innerHTML = "toggle_on";
+    }
+})
+
+scrollToggle.addEventListener("click", function(e) {
+    if(scrollToggle.classList.contains("toggle-on")){
+        scrollToggle.classList.remove("toggle-on");
+        scrollToggle.innerHTML = "toggle_off";
+        body.classList.remove("overflow-auto");
+        body.classList.add("overflow-hidden");
+    }else {
+        scrollToggle.classList.add("toggle-on");
+        scrollToggle.innerHTML = "toggle_on";
+        body.classList.add("overflow-auto");
+        body.classList.remove("overflow-hidden");
+    }
+})
+
