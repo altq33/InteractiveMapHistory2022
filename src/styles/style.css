@@ -571,7 +571,7 @@ body::-webkit-scrollbar-corner {
   top: 80px; 
   right: 50px;
   width: 320px;
-  height: 235px;
+  height: 145px;
   background-color: #292d3d;
   border-radius: 4px; 
   display: flex;
@@ -606,6 +606,13 @@ body::-webkit-scrollbar-corner {
 .media-container {
   width: 100%;
   border-top: 1px solid hsla(0,0%,100%,.1);
+  color: #FFFFFFD9;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 53px;
+  font-size: 18px;
+  justify-content: space-around;
 }
 
 .material-icons {
@@ -614,4 +621,10 @@ body::-webkit-scrollbar-corner {
 
 .scroll-toggle, .theme-toggle {
   cursor: pointer;
+}
+
+.about-us, .sourse {
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFFFFFD9;
 }
