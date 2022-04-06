@@ -497,8 +497,8 @@ body::-webkit-scrollbar-corner {
 }
 .modal-content2 { 
   position: relative;
-  transition: all 0.5s ease;
-  transform: translate(10px, -10px);
+  transition: all 0.3s ease;
+  transform: translate(0px, 100%);
 }
 .modal-close {
   position: absolute;
@@ -509,12 +509,13 @@ body::-webkit-scrollbar-corner {
   transition: all 0.3s ease;
   font-size: 20px;
   text-align: center;
+  color: #a4a6ad;
 }
 
 .modal-close:focus, .modal-close:active, .modal-close {
   text-decoration: none;
   outline: none;
-  color: #000;
+  color: #a4a6ad;
 }
 
 .modal-close:hover {
@@ -530,6 +531,11 @@ body::-webkit-scrollbar-corner {
 .modal.open .modal-content {
   opacity: 1;
   transform: perspective(600px) translate(0, 0%) rotateX(0deg);
+}
+
+.modal.open .modal-content2 {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .modal-info-content {
@@ -627,4 +633,33 @@ body::-webkit-scrollbar-corner {
   cursor: pointer;
   text-decoration: none;
   color: #FFFFFFD9;
+}
+
+.about-us:hover, .sourse:hover {
+  color: #FFFFFF;
+}
+
+.about-us-content {
+  width: 100%;
+  height: 100%;
+  background-color: #292d3d;
+  position: fixed;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-about {
+  opacity: 1;
+  backdrop-filter: blur(0px);
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.modal-about .modal-close {
+  font-size: 30px;
+  right: 20px;
+  top: 20px;
 }

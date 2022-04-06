@@ -29,7 +29,7 @@ const settingsExpand = document.querySelector(".settings-button");
 settingsExpand.addEventListener("click", onSettings);
 window.addEventListener("click", e =>  {
     const target = e.target;
-    if(!target.closest('.modal-settings-content') && !target.closest('.settings-button')) {
+    if(!target.closest('.modal-settings-content') && !target.closest('.settings-button') && !target.closest(".modal-close")) {
         settings.classList.remove("settings-open");
     }
 })
