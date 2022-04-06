@@ -39,7 +39,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: #292d3d;
+  background-color: #171a29;
   cursor: grab;
 }
 .overflow-auto {
@@ -205,7 +205,7 @@ h6 {
   left: 0;
   width: 62px;
   height: 62px;
-  background-color: #1f222e;
+  background-color: #292d3d;
   cursor: pointer;
   background-image: url(../../icons/arrow-right.svg);
   background-size: 80% 80%;
@@ -232,7 +232,7 @@ h6 {
   position: fixed;
   top: 10px;
   right: 10px;
-  background-color: #1f222e;
+  background-color: #292d3d;
   background-image: url(../../icons/settings.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -308,7 +308,7 @@ h6 {
   background: url(../../icons/infocopy.svg) no-repeat;
 }
 .legend-main {
-  padding: 23px;
+  padding: 22px;
 }
 .event-container {
   margin-bottom: 23px;
