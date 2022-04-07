@@ -766,6 +766,12 @@ body::-webkit-scrollbar-corner {
   transition: all .5s ease;
 }
 
+.social-icons-item a {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
 .social-icons-item:first-child {
   background: url(../../icons/vk-brands.svg) no-repeat;
 }
