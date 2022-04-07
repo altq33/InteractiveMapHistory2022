@@ -359,9 +359,10 @@ label span {
   height: auto;
   max-height: 92px;
   overflow: hidden;
-  transition: max-height 1.5s ;
+  transition: all .5s linear;
+  opacity: 1;
 }
-
+  
 .sub-ul-hidden{
   display: flex;
   flex-direction: column;
@@ -372,18 +373,20 @@ label span {
   height: auto;
   max-height: 0px;
 }
-
-
+  
+  
 .event-item {
   display: flex;
   background-color: #1f222e;
   width: 320px;
-  height: 36px;
+  min-height: 36px;
   margin-bottom: 10px;
   align-items: center;
   padding-left: 20px;
   transition: all .2s linear;
 }
+
+
 .event-item:hover {
   transform: translate(-7px, -2px);
   transition: all .2s linear;

@@ -68,17 +68,14 @@ scrollToggle.addEventListener("click", function(e) {
 
 
 castle_ul.onclick = function (event){
-    
     tree1.classList.toggle("sub-ul-hidden");
 }
 
 factory_ul.onclick = function (event){
-    
     tree2.classList.toggle("sub-ul-hidden");
 }
 
 siege_ul.onclick = function (event){
-    
     tree3.classList.toggle("sub-ul-hidden");
 }
 
