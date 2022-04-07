@@ -87,3 +87,25 @@ siege_ul.onclick = function (event){
 battles_ul.onclick = function (event){
     tree4.classList.toggle("sub-ul-hidden");
 }
+
+
+const icons = document.querySelectorAll(".icon"); 
+const eventItems = document.querySelectorAll(".event-item"); 
+
+for(eventItem of  eventItems) {
+    eventItem.addEventListener("click", scrollToIcon); 
+}
+
+function scrollToIcon() {
+    currentId = this.id[this.id.length - 1];
+    const currentIcon = document.querySelector("#icon-map" + currentId);
+    currentIcon.scrollIntoView({block: "center", inline: "center", behavior: "smooth"});
+    currentIcon.style.transform = "translate(-10px) scale(1.8)";
+    window.addEventListener("click", e => {
+        const target = e.target;
+    if(target != currentIcon && target != this) {
+        currentIcon.style.transform = "";
+    }
+    });
+}
+ 
