@@ -41,14 +41,19 @@ function onSettings(e) {
 
 const themeToggle = document.querySelector(".theme-toggle");
 const scrollToggle = document.querySelector(".scroll-toggle");
+const html = document.querySelector("html");
 
 themeToggle.addEventListener("click", function(e) {
     if(themeToggle.classList.contains("toggle-on")){
         themeToggle.classList.remove("toggle-on");
         themeToggle.innerHTML = "toggle_off";
+        html.classList.remove("light");
+        html.classList.add("dark");
     }else {
         themeToggle.classList.add("toggle-on");
         themeToggle.innerHTML = "toggle_on";
+        html.classList.remove("dark");
+        html.classList.add("light");
     }
 })
 

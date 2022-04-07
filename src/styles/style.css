@@ -1,4 +1,25 @@
 /*Обнуление*/
+html.light { 
+  --main-body-color: #DFE2E7;
+  --bg-blocks-color: #FFFFFF;
+  --front-blocks-color: #525452;
+  --text-color: #3C484F;
+  --header-title-color: #10C6B3;
+  --header-title-hover-color: #036c62;
+  --checkbox-color: #10C6B3;
+}
+
+html.dark {
+  --main-body-color: #171a29;
+  --bg-blocks-color: #292d3d;
+  --front-blocks-color: #1f222e;
+  --text-color: #a4a6ad;
+  --header-title-color: #4a71c4;
+  --header-title-hover-color: rgb(65, 67, 216);
+  --checkbox-color: rgb(81, 50, 255);
+  --title-event-color: #FFF;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -39,7 +60,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: #171a29;
+  background-color: var(--main-body-color);
   cursor: grab;
 }
 .overflow-auto {
@@ -205,7 +226,7 @@ h6 {
   left: 0;
   width: 62px;
   height: 62px;
-  background-color: #292d3d;
+  background-color: var(--bg-blocks-color);
   cursor: pointer;
   background-image: url(../../icons/arrow-right.svg);
   background-size: 80% 80%;
@@ -232,7 +253,7 @@ h6 {
   position: fixed;
   top: 10px;
   right: 10px;
-  background-color: #292d3d;
+  background-color: var(--bg-blocks-color);
   background-image: url(../../icons/settings.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -249,8 +270,8 @@ h6 {
 .legend-container {
   height: 90vh;
   width: 425px;
-  background-color: #292d3d;
-  color: #a4a6ad;
+  background-color: var(--bg-blocks-color);
+  color: var(--text-color);
   overflow-y: auto;
   flex: 0 0 auto;
   overflow-x: hidden;
@@ -273,7 +294,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1f222e;
+  background-color: var(--front-blocks-color);
   padding: 0 23px;
   z-index: 3;
   transition: all .5s ease;
@@ -289,13 +310,13 @@ h6 {
 
 
 .legend-title {
-  color: #4a71c4;
+  color: var(--header-title-color);
   font-size: 32px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .legend-title:hover {
-  color: rgb(65, 67, 216);
+  color: var(--header-title-hover-color);
 }
 .info-button {
   width: 12px;
@@ -308,7 +329,7 @@ h6 {
   background: url(../../icons/infocopy.svg) no-repeat;
 }
 .legend-main {
-  padding: 22px;
+  padding: 22px 22px 0 22px;
 }
 .event-container {
   margin-bottom: 23px;
@@ -349,7 +370,7 @@ label span {
   top: -5px;
   left: 0;
   font-size:23px;
-  color:rgb(81, 50, 255);
+  color: var(--checkbox-color);
 }
 
 .sub-ul {
@@ -359,7 +380,7 @@ label span {
   height: auto;
   max-height: 92px;
   overflow: hidden;
-  transition: all .5s linear;
+  transition: all .5s ease;
   opacity: 1;
 }
   
@@ -367,7 +388,7 @@ label span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all .5s linear;
+  transition: all .5s ease;
   opacity: 0;
   overflow: hidden;
   height: auto;
@@ -377,7 +398,7 @@ label span {
   
 .event-item {
   display: flex;
-  background-color: #1f222e;
+  background-color: var(--front-blocks-color);
   width: 320px;
   min-height: 36px;
   margin-bottom: 10px;
@@ -398,7 +419,7 @@ label span {
   align-items: center;
 }
 .title-container:hover {
-  color: white;
+  color: var(--title-event-color);
   transition: all 0.3s ease;
   transform: scale(1.05);
 }
@@ -473,7 +494,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 body::-webkit-scrollbar-corner {
-  background-color: #1f222e;
+  background-color: var(--front-blocks-color);
 }
 
 .legend-container::-webkit-scrollbar{
@@ -482,7 +503,7 @@ body::-webkit-scrollbar-corner {
 }
 
  .legend-container::-webkit-scrollbar-thumb{
-  background-color: #a4a6ad;;
+  background-color: var(--text-color);;
   border-radius: 10px;
   width: 3px;
 }
@@ -530,13 +551,13 @@ body::-webkit-scrollbar-corner {
   transition: all 0.3s ease;
   font-size: 20px;
   text-align: center;
-  color: #a4a6ad;
+  color: var(--text-color);
 }
 
 .modal-close:focus, .modal-close:active, .modal-close {
   text-decoration: none;
   outline: none;
-  color: #a4a6ad;
+  color: var(--text-color);
 }
 
 .modal-close:hover {
@@ -560,8 +581,8 @@ body::-webkit-scrollbar-corner {
 }
 
 .modal-info-content {
-  background-color: #292d3d;
-  color: #a4a6ad;
+  background-color: var(--bg-blocks-color);
+  color: var(--text-color);
   font-size: 18px;
   width: 800px;
   height: 520px;
@@ -587,7 +608,7 @@ body::-webkit-scrollbar-corner {
 }
 
 .info-text-container span{
-  color: #4a71c4;
+  color: var(--header-title-color);
   font-size: 25px;
 }
 
@@ -604,7 +625,7 @@ body::-webkit-scrollbar-corner {
   right: 50px;
   width: 320px;
   height: 145px;
-  background-color: #292d3d;
+  background-color: var(--bg-blocks-color);
   border-radius: 4px; 
   display: flex;
   flex-direction: column;
@@ -629,7 +650,7 @@ body::-webkit-scrollbar-corner {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  color: #FFFFFFD9;
+  color: var(--text-color);
   height: 45px;
   align-items: center; 
   padding: 0 10px;
@@ -638,7 +659,7 @@ body::-webkit-scrollbar-corner {
 .media-container {
   width: 100%;
   border-top: 1px solid hsla(0,0%,100%,.1);
-  color: #FFFFFFD9;
+  color: var(--text-color);
   display: flex;
   align-items: center;
   padding: 10px;
@@ -658,17 +679,17 @@ body::-webkit-scrollbar-corner {
 .about-us, .sourse {
   cursor: pointer;
   text-decoration: none;
-  color: #FFFFFFD9;
+  color: var(--text-color);
 }
 
 .about-us:hover, .sourse:hover {
-  color: #FFFFFF;
+  color: var(--title-event-color);
 }
 
 .about-us-content {
   width: 100%;
   height: 100%;
-  background-color: #292d3d;
+  background-color: var(--bg-blocks-color);
   position: fixed;
   padding: 20px;
   display: flex;
