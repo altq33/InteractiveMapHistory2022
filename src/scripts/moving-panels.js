@@ -90,6 +90,7 @@ battles_ul.onclick = function (event){
 
 
 const icons = document.querySelectorAll(".icon"); 
+console.log(typeof icons);
 const eventItems = document.querySelectorAll(".event-item"); 
 
 for(eventItem of  eventItems) {
@@ -108,4 +109,25 @@ function scrollToIcon() {
     }
     });
 }
- 
+
+const allEventsItems = [].concat(...icons, ...eventItems);
+
+for(eventItem of allEventsItems) {
+    eventItem.addEventListener("click", modalOpen);
+}
+
+function modalOpen() {
+    currentId = this.id[this.id.length - 1];
+    const currentModal = document.querySelector("#event-modal" + currentId);
+    const eventClose = document.querySelector(".event-modal-close");
+    window.addEventListener("click", e => {
+        const target = e.target;
+        if(target == eventClose || (target.id.slice(0, -1)  == "icon-map")) {
+            currentModal.classList.toggle("open");
+        }
+        });
+    if(!currentModal.classList.contains("open")) {
+        currentModal.classList.add("open");
+    }
+   
+}

@@ -110,6 +110,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: 400;
+  user-select: none;
 }
 /*--------------------*/
 
@@ -555,6 +556,7 @@ body::-webkit-scrollbar-corner {
   font-size: 20px;
   text-align: center;
   color: var(--text-color);
+  user-select: none;
 }
 
 .modal-close:focus, .modal-close:active, .modal-close {
@@ -604,10 +606,12 @@ body::-webkit-scrollbar-corner {
 
 .info-img-container img:first-child{
   width: 33%;
+  user-select: none;
 }
 
 .info-img-container img:last-child{
   width: 65%;
+  user-select: none;
 }
 
 .info-text-container span{
@@ -622,6 +626,7 @@ body::-webkit-scrollbar-corner {
 }
 
 .modal-settings-content {
+  user-select: none;
   cursor: default;
   position: fixed;
   top: 80px; 
@@ -848,5 +853,30 @@ body::-webkit-scrollbar-corner {
 .source-list-item:hover {
   transform: scale(1.1);
   transition: all .3s ease;
+}
+
+.event-modal {
+  width: 425px;
+  height: 100%;
+  position: fixed;
+  left: 0; 
+  top: 0;
+  visibility: hidden;
+  z-index: 5;
+  transform: translate(0, 100%);
+  transition: all ease .5s;
+  cursor: default;
+}
+
+.event-modal-content {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-blocks-color);
+}
+
+.event-modal.open {
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: all ease .5s;
 }
 
