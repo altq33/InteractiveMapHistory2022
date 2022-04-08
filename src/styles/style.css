@@ -1,14 +1,17 @@
 /*Обнуление*/
 html.light { 
-  --main-body-color: #DFE2E7;
+  --main-body-color: #000000;
   --bg-blocks-color: #FFFFFF;
-  --front-blocks-color: #525452;
-  --text-color: #3C484F;
-  --header-title-color: #10C6B3;
-  --header-title-hover-color: #036c62;
-  --checkbox-color: #10C6B3;
-  --title-event-color: #FFF;
-  --name-color: #FFF;
+  --front-blocks-color: #eeeeee;
+  --text-color: #000000;
+  --header-title-color: #007acc;
+  --header-title-hover-color: #004f74;
+  --checkbox-color: #007acc;
+  --title-event-color: rgb(0, 0, 0);
+  --name-color: rgb(0, 0, 0);
+  --info-path: url('../../icons/info.svg');
+  --settings-path: url('../../icons/settings.svg');
+  --arrow-path: url('../../icons/arrow-right.svg');
 }
 
 html.dark {
@@ -20,7 +23,10 @@ html.dark {
   --header-title-hover-color: rgb(65, 67, 216);
   --checkbox-color: rgb(81, 50, 255);
   --title-event-color: #FFF;
-  --name-color: #FFF;
+  --name-color: rgb(0, 0, 0);
+  --info-path: url('../../icons/infocopy.svg');
+  --settings-path: url('../../icons/settings\ —\ copy.svg');
+  --arrow-path: url('../../icons/arrow-right\ —\ copy.svg');
 }
 
 * {
@@ -232,7 +238,7 @@ h6 {
   height: 62px;
   background-color: var(--bg-blocks-color);
   cursor: pointer;
-  background-image: url(../../icons/arrow-right.svg);
+  background: var(--arrow-path) no-repeat;
   background-size: 80% 80%;
   background-repeat: no-repeat;
   background-position: right;
@@ -258,7 +264,7 @@ h6 {
   top: 10px;
   right: 10px;
   background-color: var(--bg-blocks-color);
-  background-image: url(../../icons/settings.svg);
+  background: var(--settings-path) no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80% 80%;
@@ -325,13 +331,17 @@ h6 {
 .info-button {
   width: 12px;
   height: 26px;
-  background: url(../../icons/info.svg) no-repeat;
+  background: var(--info-path) no-repeat;
 }
 .info-button:hover {
   transform: scale(1.3);
   transition: all 0.7s ease;
-  background: url(../../icons/infocopy.svg) no-repeat;
+  background: var(--info-path) no-repeat;
 }
+
+
+
+
 .legend-main {
   padding: 22px 22px 0 22px;
 }
@@ -596,6 +606,7 @@ body::-webkit-scrollbar-corner {
   display: flex;
   flex-direction: column;
 }
+
 
 .info-img-container {
   width: 100%;
