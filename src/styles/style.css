@@ -360,7 +360,7 @@ h6 {
   height: auto;
 }
 .event-header {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -406,6 +406,7 @@ label span {
   overflow: hidden;
   transition: all .5s ease;
   opacity: 1;
+  padding-top: 10px;
 }
   
 .sub-ul-hidden{

@@ -111,23 +111,36 @@ function scrollToIcon() {
 }
 
 const allEventsItems = [].concat(...icons, ...eventItems);
-
-for(eventItem of allEventsItems) {
-    eventItem.addEventListener("click", modalOpen);
+const allEventModals = document.querySelectorAll(".event-modal");
+let reopen = false; 
+for(item of allEventsItems) {
+    item.addEventListener("click", modalLogic);
 }
 
-function modalOpen() {
-    currentId = this.id[this.id.length - 1];
+function modalLogic() {
+    let currentId = this.id[this.id.length - 1];
     const currentModal = document.querySelector("#event-modal" + currentId);
-    const eventClose = document.querySelector(".event-modal-close");
-    window.addEventListener("click", e => {
-        const target = e.target;
-        if(target == eventClose || (target.id.slice(0, -1)  == "icon-map")) {
-            currentModal.classList.toggle("open");
+    for(item of allEventModals) {
+        if(item.classList.contains("open") && item != currentModal) {
+            item.classList.remove("open");
+            reopen = true; 
         }
-        });
-    if(!currentModal.classList.contains("open")) {
+    }
+    if(reopen) {
+        setTimeout(() => currentModal.classList.add("open"), 600);  
+    }else {
         currentModal.classList.add("open");
     }
-   
+    window.addEventListener("click", e => {
+        const target = e.target;
+    if(target.classList.contains("event-modal-close")) {
+        for(item of allEventModals) {
+            if(item.classList.contains("open")) {
+                item.classList.remove("open");
+                reopen = false; 
+            }
+        }
+    }
+    });
 }
+
