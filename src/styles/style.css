@@ -12,6 +12,11 @@ html.light {
   --info-path: url('../../icons/info.svg');
   --settings-path: url('../../icons/settings.svg');
   --arrow-path: url('../../icons/arrow-right.svg');
+  --vk-path: url('../../icons/vk-brands.svg'); 
+  --yt-path: url('../../icons/youtube-brands.svg'); 
+  --spotify-path: url('../../icons/spotify-brands.svg'); 
+  --git-path: url('../../icons/github-brands.svg'); 
+  --shadow-altq33: 1px 0px 5px 4px rgba(0, 0, 0, 0.729);
 }
 
 html.dark {
@@ -23,10 +28,15 @@ html.dark {
   --header-title-hover-color: rgb(65, 67, 216);
   --checkbox-color: rgb(81, 50, 255);
   --title-event-color: #FFF;
-  --name-color: rgb(0, 0, 0);
+  --name-color: rgb(255, 255, 255);
   --info-path: url('../../icons/infocopy.svg');
   --settings-path: url('../../icons/settings\ —\ copy.svg');
   --arrow-path: url('../../icons/arrow-right\ —\ copy.svg');
+  --vk-path: url('../../icons/vk-brands\ —\ copy.svg'); 
+  --yt-path: url('../../icons/youtube-brands\ —\ copy.svg'); 
+  --spotify-path: url('../../icons/spotify-brands\ —\ copy.svg'); 
+  --git-path: url('../../icons/github-brands\ —\ сopy.svg'); 
+  --shadow-altq33: 1px 0px 5px 4px rgba(255, 255, 255, 0.729);
 }
 
 * {
@@ -236,9 +246,9 @@ h6 {
   left: 0;
   width: 62px;
   height: 62px;
-  background-color: var(--bg-blocks-color);
   cursor: pointer;
   background: var(--arrow-path) no-repeat;
+  background-color: var(--bg-blocks-color);
   background-size: 80% 80%;
   background-repeat: no-repeat;
   background-position: right;
@@ -263,8 +273,8 @@ h6 {
   position: fixed;
   top: 10px;
   right: 10px;
-  background-color: var(--bg-blocks-color);
   background: var(--settings-path) no-repeat;
+  background-color: var(--bg-blocks-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80% 80%;
@@ -759,7 +769,7 @@ body::-webkit-scrollbar-corner {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  box-shadow:  1px 0px 5px 4px rgba(255, 255, 255, 0.729);
+  box-shadow:  var(--shadow-altq33);
 }
 .social-container-title {
   font-size: 36px;
@@ -789,19 +799,19 @@ body::-webkit-scrollbar-corner {
 }
 
 .social-icons-item:first-child {
-  background: url(../../icons/vk-brands.svg) no-repeat;
+  background: var(--vk-path) no-repeat;
 }
 
 .social-icons-item:nth-child(2) {
-  background: url(../../icons/youtube-brands.svg) no-repeat;
+  background: var(--yt-path) no-repeat;
 }
 
 .social-icons-item:nth-child(3) {
-  background: url(../../icons/spotify-brands.svg) no-repeat;
+  background: var(--spotify-path) no-repeat;
 }
 
 .social-icons-item:last-child {
-  background: url(../../icons/github-brands.svg) no-repeat;
+  background: var(--git-path) no-repeat;
 }
 
 .right-container {
