@@ -894,6 +894,7 @@ body::-webkit-scrollbar-corner {
   width: 100%;
   height: 100%;
   background-color: var(--bg-blocks-color);
+  padding: 30px 20px 20px 20px;
 }
 
 .event-modal.open {
@@ -902,3 +903,42 @@ body::-webkit-scrollbar-corner {
   transition: all ease .5s;
 }
 
+.event-modal-body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.event-modal-img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.event-name {
+  color: var(--header-title-color);
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.event-date {
+  background-color: var(--front-blocks-color);
+  color: var(--text-color);
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  border-radius: 6px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.text {
+  color: var(--text-color);
+  line-height: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.event-modal-close {
+  cursor: pointer;с
+}
