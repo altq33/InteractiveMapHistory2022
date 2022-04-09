@@ -867,7 +867,7 @@ body::-webkit-scrollbar-corner {
 
 .source-list-item a {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-color);
   width: 100%;
   display: block;
 }
