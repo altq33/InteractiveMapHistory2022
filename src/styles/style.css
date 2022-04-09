@@ -519,7 +519,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 body::-webkit-scrollbar-corner {
-  background-color: var(--front-blocks-color);
+  background-color: var(--main-body-color);
 }
 
 .legend-container::-webkit-scrollbar{
