@@ -88,6 +88,7 @@ siege_ul.onclick = function (event){
 
 battles_ul.onclick = function (event){
     tree4.classList.toggle("sub-ul-hidden");
+    tree7.classList.toggle("sub-ul-hidden");
 }
 
 
