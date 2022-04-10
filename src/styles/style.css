@@ -262,6 +262,11 @@ h6 {
   top: 1307px;
   left: 394px;
 }
+#icon-mape{
+  position: absolute;
+  left: 189px;
+  top: 600px;
+}
 .fullscreen-container {
   display: flex;
 }
@@ -558,6 +563,17 @@ body::-webkit-scrollbar-corner {
 }
 
  .legend-container::-webkit-scrollbar-thumb{
+  background-color: var(--text-color);;
+  border-radius: 10px;
+  width: 3px;
+}
+
+.event-modal-body::-webkit-scrollbar{
+  width: 4px;
+  border-radius: 10px;
+}
+
+ .event-modal-body::-webkit-scrollbar-thumb{
   background-color: var(--text-color);;
   border-radius: 10px;
   width: 3px;
