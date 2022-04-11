@@ -17,6 +17,7 @@ html.light {
   --spotify-path: url('../../icons/spotify-brands.svg'); 
   --git-path: url('../../icons/github-brands.svg'); 
   --shadow-altq33: 1px 0px 5px 4px rgba(0, 0, 0, 0.729);
+  
 }
 
 html.dark {
@@ -37,6 +38,7 @@ html.dark {
   --spotify-path: url('../../icons/spotify-brands\ —\ copy.svg'); 
   --git-path: url('../../icons/github-brands\ —\ сopy.svg'); 
   --shadow-altq33: 1px 0px 5px 4px rgba(255, 255, 255, 0.729);
+  --text-info-color: #fff;
 }
 
 * {
@@ -999,10 +1001,15 @@ body::-webkit-scrollbar-corner {
   width: 100%;
   display: block;
 }
+.source-list-item a:hover {
+  transition: all .3s ease;
+  color: var(--text-info-color);
+}
 
 .source-list-item:hover {
   transform: scale(1.1);
   transition: all .3s ease;
+  color: var(--text-info-color);
 }
 
 .event-modal {
