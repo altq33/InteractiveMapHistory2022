@@ -552,6 +552,7 @@ label span {
 .event-item:hover {
   transform: translate(-7px, -2px);
   transition: all .2s linear;
+  color: var(--text-info-color);
 }
 
 .title-container {
