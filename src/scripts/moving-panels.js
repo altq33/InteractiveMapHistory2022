@@ -74,28 +74,18 @@ scrollToggle.addEventListener("click", function(e) {
 
 castle_ul.onclick = function (event){
     tree1.classList.toggle("sub-ul-hidden");
-    tree5.classList.toggle("sub-ul-hidden");
-    tree8.classList.toggle("sub-ul-hidden");
 }
 
 factory_ul.onclick = function (event){
     tree2.classList.toggle("sub-ul-hidden");
-    tree12.classList.toggle("sub-ul-hidden");
 }
 
 siege_ul.onclick = function (event){
     tree3.classList.toggle("sub-ul-hidden");
-    tree6.classList.toggle("sub-ul-hidden");
-    tree9.classList.toggle("sub-ul-hidden");
-    tree10.classList.toggle("sub-ul-hidden");
-    tree13.classList.toggle("sub-ul-hidden");
-    tree14.classList.toggle("sub-ul-hidden");
 }
 
 battles_ul.onclick = function (event){
     tree4.classList.toggle("sub-ul-hidden");
-    tree7.classList.toggle("sub-ul-hidden");
-    tree11.classList.toggle("sub-ul-hidden");
 }
 
 

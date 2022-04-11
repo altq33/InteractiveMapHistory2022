@@ -497,18 +497,32 @@ label span {
   color: var(--checkbox-color);
 }
 
-.sub-ul {
+.sub-ul{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
-  max-height: 92px;
+  max-height: 280px;
   overflow: hidden;
   transition: all .5s ease;
   opacity: 1;
   padding-top: 10px;
 }
+
+#tree1{
+  height: 280px;
+}
   
+#tree2{
+  height: 190px;
+}
+
+#tree3{
+  height: 560px;
+}
+
+#tree4{
+  height: 240px;
+}
 .sub-ul-hidden{
   display: flex;
   flex-direction: column;
