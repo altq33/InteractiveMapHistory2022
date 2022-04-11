@@ -501,27 +501,27 @@ label span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 280px;
   overflow: hidden;
   transition: all .5s ease;
   opacity: 1;
   padding-top: 10px;
+  height: auto;
 }
 
-#tree1{
-  height: 280px;
+.tree1{
+  max-height: 280px;
 }
   
-#tree2{
-  height: 190px;
+.tree2{
+  max-height: 190px;
 }
 
-#tree3{
-  height: 560px;
+.tree3{
+  max-height: 560px;
 }
 
-#tree4{
-  height: 240px;
+.tree4{
+  max-height: 240px;
 }
 .sub-ul-hidden{
   display: flex;
